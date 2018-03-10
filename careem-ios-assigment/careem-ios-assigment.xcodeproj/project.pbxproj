@@ -14,6 +14,8 @@
 		23C5D6CA205342DE000ABD91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23C5D6C8205342DE000ABD91 /* LaunchScreen.storyboard */; };
 		23C5D6D5205342DE000ABD91 /* careem_ios_assigmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C5D6D4205342DE000ABD91 /* careem_ios_assigmentTests.swift */; };
 		23C5D6E0205342DE000ABD91 /* careem_ios_assigmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C5D6DF205342DE000ABD91 /* careem_ios_assigmentUITests.swift */; };
+		23C5D6F02053A871000ABD91 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23C5D6EE2053A871000ABD91 /* AlamofireImage.framework */; };
+		23C5D6F12053A871000ABD91 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23C5D6EF2053A871000ABD91 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		23C5D6DB205342DE000ABD91 /* careem-ios-assigmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "careem-ios-assigmentUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23C5D6DF205342DE000ABD91 /* careem_ios_assigmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = careem_ios_assigmentUITests.swift; sourceTree = "<group>"; };
 		23C5D6E1205342DE000ABD91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23C5D6EE2053A871000ABD91 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
+		23C5D6EF2053A871000ABD91 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23C5D6F02053A871000ABD91 /* AlamofireImage.framework in Frameworks */,
+				23C5D6F12053A871000ABD91 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +87,7 @@
 				23C5D6D3205342DE000ABD91 /* careem-ios-assigmentTests */,
 				23C5D6DE205342DE000ABD91 /* careem-ios-assigmentUITests */,
 				23C5D6BD205342DE000ABD91 /* Products */,
+				23C5D6ED2053A870000ABD91 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +132,15 @@
 			path = "careem-ios-assigmentUITests";
 			sourceTree = "<group>";
 		};
+		23C5D6ED2053A870000ABD91 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				23C5D6EF2053A871000ABD91 /* Alamofire.framework */,
+				23C5D6EE2053A871000ABD91 /* AlamofireImage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +151,7 @@
 				23C5D6B8205342DE000ABD91 /* Sources */,
 				23C5D6B9205342DE000ABD91 /* Frameworks */,
 				23C5D6BA205342DE000ABD91 /* Resources */,
+				23C5D6F22053A8F6000ABD91 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -253,6 +270,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		23C5D6F22053A8F6000ABD91 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		23C5D6B8205342DE000ABD91 /* Sources */ = {
@@ -427,6 +462,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "careem-ios-assigment/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "CA.careem-ios-assigment";
@@ -441,6 +480,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "careem-ios-assigment/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "CA.careem-ios-assigment";
