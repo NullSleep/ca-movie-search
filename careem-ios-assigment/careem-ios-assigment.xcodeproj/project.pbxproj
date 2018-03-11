@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		23C5D6C0205342DE000ABD91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C5D6BF205342DE000ABD91 /* AppDelegate.swift */; };
-		23C5D6C2205342DE000ABD91 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C5D6C1205342DE000ABD91 /* ViewController.swift */; };
 		23C5D6C5205342DE000ABD91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23C5D6C3205342DE000ABD91 /* Main.storyboard */; };
 		23C5D6C7205342DE000ABD91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23C5D6C6205342DE000ABD91 /* Assets.xcassets */; };
 		23C5D6CA205342DE000ABD91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23C5D6C8205342DE000ABD91 /* LaunchScreen.storyboard */; };
@@ -16,6 +15,8 @@
 		23C5D6E0205342DE000ABD91 /* careem_ios_assigmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C5D6DF205342DE000ABD91 /* careem_ios_assigmentUITests.swift */; };
 		23C5D6F02053A871000ABD91 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23C5D6EE2053A871000ABD91 /* AlamofireImage.framework */; };
 		23C5D6F12053A871000ABD91 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23C5D6EF2053A871000ABD91 /* Alamofire.framework */; };
+		23C5D7122054AF95000ABD91 /* MovieSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C5D7112054AF95000ABD91 /* MovieSearchViewController.swift */; };
+		23C5D7142054B391000ABD91 /* ApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C5D7132054B391000ABD91 /* ApiHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +39,6 @@
 /* Begin PBXFileReference section */
 		23C5D6BC205342DE000ABD91 /* careem-ios-assigment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "careem-ios-assigment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23C5D6BF205342DE000ABD91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		23C5D6C1205342DE000ABD91 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		23C5D6C4205342DE000ABD91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		23C5D6C6205342DE000ABD91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23C5D6C9205342DE000ABD91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +51,8 @@
 		23C5D6E1205342DE000ABD91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23C5D6EE2053A871000ABD91 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		23C5D6EF2053A871000ABD91 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		23C5D7112054AF95000ABD91 /* MovieSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchViewController.swift; sourceTree = "<group>"; };
+		23C5D7132054B391000ABD91 /* ApiHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,10 +107,11 @@
 			isa = PBXGroup;
 			children = (
 				23C5D6BF205342DE000ABD91 /* AppDelegate.swift */,
-				23C5D6C1205342DE000ABD91 /* ViewController.swift */,
+				23C5D7112054AF95000ABD91 /* MovieSearchViewController.swift */,
+				23C5D7132054B391000ABD91 /* ApiHandler.swift */,
 				23C5D6C3205342DE000ABD91 /* Main.storyboard */,
-				23C5D6C6205342DE000ABD91 /* Assets.xcassets */,
 				23C5D6C8205342DE000ABD91 /* LaunchScreen.storyboard */,
+				23C5D6C6205342DE000ABD91 /* Assets.xcassets */,
 				23C5D6CB205342DE000ABD91 /* Info.plist */,
 			);
 			path = "careem-ios-assigment";
@@ -294,8 +297,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23C5D6C2205342DE000ABD91 /* ViewController.swift in Sources */,
 				23C5D6C0205342DE000ABD91 /* AppDelegate.swift in Sources */,
+				23C5D7142054B391000ABD91 /* ApiHandler.swift in Sources */,
+				23C5D7122054AF95000ABD91 /* MovieSearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
