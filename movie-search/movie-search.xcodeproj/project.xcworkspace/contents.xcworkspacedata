@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:careem-ios-assigment.xcodeproj">
+      location = "self:movie-search.xcodeproj">
    </FileRef>
 </Workspace>

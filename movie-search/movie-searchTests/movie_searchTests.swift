@@ -1,15 +1,15 @@
 //
-//  careem_ios_assigmentTests.swift
-//  careem-ios-assigmentTests
+//  movie_searchTests.swift
+//  movie-searchTests
 //
-//  Created by Carlos Arenas on 3/9/18.
+//  Created by Carlos Arenas on 3/11/18.
 //  Copyright © 2018 Carlos Arenas. All rights reserved.
 //
 
 import XCTest
-@testable import careem_ios_assigment
+@testable import movie_search
 
-class careem_ios_assigmentTests: XCTestCase {
+class movie_searchTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

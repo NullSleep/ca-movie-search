@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  careem-ios-assigment
+//  movie-search
 //
-//  Created by Carlos Arenas on 3/9/18.
+//  Created by Carlos Arenas on 3/11/18.
 //  Copyright © 2018 Carlos Arenas. All rights reserved.
 //
 

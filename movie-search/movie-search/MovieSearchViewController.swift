@@ -1,15 +1,15 @@
 //
 //  MovieSearchViewController.swift
-//  careem-ios-assigment
+//  movie-search
 //
-//  Created by Carlos Arenas on 3/10/18.
+//  Created by Carlos Arenas on 3/11/18.
 //  Copyright © 2018 Carlos Arenas. All rights reserved.
 //
 
 import UIKit
 
 class MovieSearchViewController: UIViewController {
-    
+
     @IBOutlet weak var searchTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -20,10 +20,10 @@ class MovieSearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -97,3 +97,4 @@ extension MovieSearchViewController: UITableViewDelegate {
         performSearch(for: searchTerms[indexPath.row])
     }
 }
+
