@@ -66,7 +66,7 @@ extension MovieSearchViewController: UISearchBarDelegate {
     }
     
     func shwoNoSearchAlert(for term: String) {
-        let alertController = UIAlertController(title: "Error", message: "No movies could be founf for \(term). Try searching for something else)", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Error", message: "No movies could be found for \(term). Try searching for something else)", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
         present(alertController, animated: true)
     }

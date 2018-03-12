@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import Alamofire
+import SwiftyJSON
 
 struct MovieData: Codable {
     let title: String
@@ -24,8 +26,28 @@ extension MovieData {
 }
 
 final class ApiHandler {
-    
+
     func performSearch(for term: String, completion: @escaping (MovieData?) -> Void) {
+        print(">>>>>> HERE")
         
+        let parameters: Parameters = ["query": term, "format": "json", "page": 1, "api_key": "ab7af61e73ec7d42ab86366c0e1374e9"]
+        
+        Alamofire.request("http://api.themoviedb.org/3/search/movie", method: .get, parameters:parameters).responseJSON { response in
+            //to get status code
+            if let status = response.response?.statusCode {
+                switch(status){
+                case 201:
+                    print("Success")
+                default:
+                    print("Error with response status: \(status)")
+                }
+            }
+            
+            //to get JSON return value
+            if let result = response.result.value {
+                let JSON = result as! NSDictionary
+                print(JSON)
+            }
+        }
     }
 }
